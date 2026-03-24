@@ -6,6 +6,8 @@
   align-items: center;
   justify-content: center;
   position: relative;
+  padding: 0 20px;
+  box-sizing: border-box;
   transition: opacity 0.4s ease, transform 0.4s ease;
 }
 
