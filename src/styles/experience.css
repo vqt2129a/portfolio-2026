@@ -250,6 +250,12 @@
   }
 }
 
+@media (min-width: 992px) {
+  .exp-wrapper {
+    justify-content: center;
+  }
+}
+
 @media (max-height: 700px) {
   .exp-wrapper {
     padding-top: 3.5rem;

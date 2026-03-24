@@ -390,6 +390,12 @@
   }
 }
 
+@media (min-width: 992px) {
+  .proj-wrapper {
+    justify-content: center;
+  }
+}
+
 /* Special case for very short screens */
 @media (max-height: 800px) {
   .proj-container {
