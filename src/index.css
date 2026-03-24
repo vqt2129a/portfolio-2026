@@ -1,0 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700;900&family=Share+Tech+Mono&display=swap");
+@import "tailwindcss";
+
+@import "./styles/base.css";
+@import "./styles/onepage.css";
+@import "./styles/hero.css";
+@import "./styles/about.css";
+@import "./styles/experience.css";
+@import "./styles/projects.css";

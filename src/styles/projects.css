@@ -1,0 +1,402 @@
+/* ═══════════════════════════════════════
+   PROJECTS SECTION
+   ═══════════════════════════════════════ */
+
+.proj-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: clamp(4rem, 8vw, 6rem) clamp(1.5rem, 5vw, 6rem);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  padding-bottom: 10rem;
+}
+
+.proj-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Reveal animations */
+.proj-label,
+.proj-heading,
+.proj-card {
+  opacity: 0;
+  transform: translateY(16px);
+  transition:
+    opacity 0.7s var(--ease-smooth),
+    transform 0.7s var(--ease-smooth);
+}
+
+.proj-container[data-in-view="true"] .proj-label,
+.proj-container[data-in-view="true"] .proj-heading,
+.proj-container[data-in-view="true"] .proj-card {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Label */
+.proj-label {
+  display: inline-block;
+  margin: 0 0 0.35rem;
+  padding: 0.4rem 0.8rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-family: "Share Tech Mono", monospace;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  font-size: 0.82rem;
+  color: var(--accent-strong);
+  background: rgba(16, 53, 59, 0.38);
+}
+
+/* Heading */
+.proj-heading {
+  margin: 0 0 0.8rem;
+  font-size: clamp(1.5rem, 3vw, 2.4rem);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.proj-heading span {
+  background: linear-gradient(90deg, var(--accent), var(--accent-strong));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Grid */
+.proj-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.7rem;
+}
+
+/* Card */
+.proj-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1.1rem;
+  border: 1px solid rgba(111, 255, 217, 0.15);
+  border-radius: 0.8rem;
+  background: linear-gradient(145deg, rgba(20, 70, 85, 0.35), rgba(10, 38, 52, 0.4));
+  backdrop-filter: blur(6px);
+  cursor: pointer;
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease,
+    transform 0.3s ease,
+    opacity 0.7s var(--ease-smooth),
+    translateY 0.7s var(--ease-smooth);
+}
+
+.proj-card:hover {
+  border-color: rgba(97, 255, 213, 0.35);
+  box-shadow: 0 8px 32px rgba(52, 245, 192, 0.12);
+  transform: translateY(-4px);
+}
+
+.proj-card:hover .proj-view-more {
+  color: var(--accent);
+  transform: translateX(4px);
+}
+
+.proj-view-more {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 1rem;
+  font-family: "Share Tech Mono", monospace;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: rgba(111, 255, 217, 0.4);
+  transition: all 0.3s ease;
+}
+
+/* ─── Modal ─── */
+.proj-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  background: rgba(4, 12, 16, 0.85);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  animation: modalFadeIn 0.3s ease forwards;
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.proj-modal-content {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  background: linear-gradient(165deg, rgba(16, 48, 58, 0.95), rgba(8, 24, 32, 0.98));
+  border: 1px solid rgba(111, 255, 217, 0.25);
+  border-radius: 1.5rem;
+  padding: 2.5rem;
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.6);
+  animation: modalSlideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes modalSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.proj-modal-close {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(111, 255, 217, 0.08);
+  border: 1px solid rgba(111, 255, 217, 0.15);
+  border-radius: 50%;
+  color: var(--text-subtle);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.proj-modal-close:hover {
+  background: rgba(111, 255, 217, 0.15);
+  color: var(--accent);
+  transform: rotate(90deg);
+}
+
+.proj-modal-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.proj-modal-icon {
+  font-size: 2.4rem;
+}
+
+.proj-modal-name {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: 800;
+  background: linear-gradient(90deg, #fff, var(--accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.proj-modal-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.proj-modal-description {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text-subtle);
+}
+
+.proj-modal-links {
+  display: flex;
+  gap: 0.8rem;
+  margin-top: 0.5rem;
+}
+
+.proj-modal-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.75rem;
+  font-family: "Share Tech Mono", monospace;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.proj-modal-btn.github {
+  background: rgba(111, 255, 217, 0.1);
+  border: 1px solid rgba(111, 255, 217, 0.3);
+  color: var(--accent);
+}
+
+.proj-modal-btn.github:hover {
+  background: rgba(111, 255, 217, 0.2);
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.proj-modal-btn.demo {
+  background: linear-gradient(135deg, var(--accent), var(--accent-strong));
+  color: #04141a;
+  font-weight: 700;
+}
+
+.proj-modal-btn.demo:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(111, 255, 217, 0.4);
+}
+
+/* Card header — folder icon + links */
+.proj-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.2rem;
+}
+
+.proj-card-icon {
+  font-size: 1.6rem;
+  line-height: 1;
+  filter: grayscale(0.2);
+}
+
+.proj-card-links {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.proj-link {
+  color: var(--text-subtle);
+  transition: color 0.2s ease, transform 0.2s ease;
+  display: flex;
+  align-items: center;
+}
+
+.proj-link:hover {
+  color: var(--accent);
+  transform: translateY(-2px);
+}
+
+/* Card content */
+.proj-card-name {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-main);
+  line-height: 1.3;
+}
+
+.proj-card-tagline {
+  margin: 0;
+  font-size: 0.82rem;
+  line-height: 1.5;
+  color: var(--text-subtle);
+  opacity: 0.85;
+  flex: 1;
+}
+
+/* Tech tags */
+.proj-card-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  margin-top: auto;
+  padding-top: 0.4rem;
+}
+
+.proj-tech-tag {
+  padding: 0.15rem 0.4rem;
+  border: 1px solid rgba(111, 255, 217, 0.18);
+  border-radius: 999px;
+  font-family: "Share Tech Mono", monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.04em;
+  color: #b8ffe8;
+  background: rgba(22, 73, 84, 0.25);
+}
+
+/* ─── Responsive (Bootstrap Mobile-First) ─── */
+
+/* Small (sm) - >= 576px */
+@media (min-width: 576px) {
+  .proj-container {
+    max-width: 540px;
+    padding: 1rem;
+  }
+}
+
+/* Medium (md) - >= 768px */
+@media (min-width: 768px) {
+  .proj-container {
+    max-width: 720px;
+  }
+
+  .proj-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.8rem;
+  }
+
+  .proj-heading {
+    font-size: 2rem;
+  }
+}
+
+/* Large (lg) - >= 992px */
+@media (min-width: 992px) {
+  .proj-container {
+    max-width: 960px;
+    padding: 1.25rem 1.5rem;
+  }
+}
+
+/* Extra large (xl) - >= 1200px */
+@media (min-width: 1200px) {
+  .proj-container {
+    max-width: 1140px;
+  }
+
+  .proj-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.9rem;
+  }
+}
+
+/* Extra extra large (xxl) - >= 1400px */
+@media (min-width: 1400px) {
+  .proj-container {
+    max-width: 1320px;
+  }
+}
+
+/* Special case for very short screens */
+@media (max-height: 800px) {
+  .proj-container {
+    max-height: calc(100vh - 100px);
+  }
+
+  .proj-heading {
+    margin-bottom: 0.5rem;
+  }
+}

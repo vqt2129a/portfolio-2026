@@ -1,0 +1,305 @@
+.about-wrapper {
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 56px clamp(1.5rem, 5vw, 6rem) 0;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  padding-bottom: 10rem;
+}
+
+.about-shell {
+  width: 100%;
+  max-width: 1320px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+}
+
+.about-left,
+.about-right {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.about-label,
+.about-heading,
+.about-copy,
+.about-highlights,
+.about-panel,
+.about-focus-list li,
+.about-chip {
+  opacity: 0;
+  transform: translateY(16px);
+  transition:
+    opacity 0.7s var(--ease-smooth),
+    transform 0.7s var(--ease-smooth);
+}
+
+.about-shell[data-in-view="true"] .about-label,
+.about-shell[data-in-view="true"] .about-heading,
+.about-shell[data-in-view="true"] .about-copy,
+.about-shell[data-in-view="true"] .about-highlights,
+.about-shell[data-in-view="true"] .about-panel,
+.about-shell[data-in-view="true"] .about-focus-list li,
+.about-shell[data-in-view="true"] .about-chip {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.about-label {
+  align-self: flex-start;
+  margin: 0;
+  padding: 0.4rem 0.8rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-family: "Share Tech Mono", monospace;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  font-size: 0.68rem;
+  color: var(--accent-strong);
+  background: rgba(16, 53, 59, 0.38);
+}
+
+.about-heading {
+  margin: 0;
+  font-size: clamp(1.6rem, 3.5vw, 2.8rem);
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  max-width: 16ch;
+  transition-delay: 0.06s;
+}
+
+.about-heading span {
+  background: linear-gradient(90deg, var(--accent), var(--accent-strong));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.about-copy {
+  margin: 0;
+  max-width: 50ch;
+  font-size: clamp(0.9rem, 1.3vw, 1.02rem);
+  line-height: 1.72;
+  color: var(--text-subtle);
+  transition-delay: 0.12s;
+}
+
+.about-highlights {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.55rem;
+  margin-top: 0.3rem;
+  transition-delay: 0.18s;
+}
+
+.about-highlight-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  padding: 0.7rem 0.85rem;
+  border: 1px solid var(--line);
+  border-radius: 0.75rem;
+  background: linear-gradient(145deg, rgba(16, 60, 72, 0.45), rgba(6, 28, 38, 0.5));
+  backdrop-filter: blur(6px);
+  transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-highlight-item:hover {
+  border-color: rgba(97, 255, 213, 0.35);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 18px rgba(52, 245, 192, 0.08);
+}
+
+.about-highlight-value {
+  font-size: clamp(1.15rem, 1.8vw, 1.4rem);
+  font-weight: 800;
+  color: var(--accent);
+  line-height: 1;
+}
+
+.about-highlight-label {
+  font-size: 0.7rem;
+  color: rgba(208, 239, 229, 0.58);
+  letter-spacing: 0.02em;
+}
+
+.about-links {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.2rem;
+  flex-wrap: wrap;
+}
+
+.about-link-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 0.5rem 1rem;
+  border: 1px solid rgba(111, 255, 217, 0.25);
+  border-radius: 8px;
+  font-family: "Share Tech Mono", monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--accent);
+  background: transparent;
+  transition: all 0.3s ease;
+}
+
+.about-link-btn:hover {
+  border-color: var(--accent);
+  background: rgba(52, 245, 192, 0.08);
+  transform: translateY(-2px);
+}
+
+.about-panel {
+  padding: 1rem;
+  border: 1px solid var(--line);
+  border-radius: 1rem;
+  background:
+    linear-gradient(140deg, rgba(19, 64, 72, 0.5), rgba(8, 34, 44, 0.3)),
+    rgba(7, 27, 36, 0.6);
+  backdrop-filter: blur(8px);
+  transition-delay: 0.1s;
+}
+
+.about-panel-title {
+  margin: 0;
+  font-family: "Share Tech Mono", monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.19em;
+  font-size: 0.7rem;
+  color: var(--accent-strong);
+}
+
+.about-focus-list {
+  list-style: none;
+  margin: 0.8rem 0 0;
+  padding: 0;
+  display: grid;
+  gap: 0.55rem;
+}
+
+.about-focus-list li {
+  position: relative;
+  margin: 0;
+  padding-left: 1.1rem;
+  color: var(--text-subtle);
+  line-height: 1.6;
+  font-size: 0.88rem;
+}
+
+.about-focus-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.6rem;
+  width: 0.45rem;
+  height: 0.45rem;
+  border-radius: 999px;
+  background: linear-gradient(120deg, #75fcd2, #57b8ff);
+  box-shadow: 0 0 8px rgba(111, 255, 217, 0.4);
+}
+
+.about-chip-list {
+  margin-top: 0.8rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.about-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.38rem 0.65rem;
+  border: 1px solid rgba(111, 255, 217, 0.28);
+  border-radius: 999px;
+  font-family: "Share Tech Mono", monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  color: #b8ffe8;
+  background: rgba(22, 73, 84, 0.28);
+  transition:
+    border-color 0.3s ease,
+    transform 0.3s ease,
+    background 0.3s ease;
+}
+
+.about-chip:hover {
+  border-color: rgba(111, 255, 217, 0.7);
+  background: rgba(48, 130, 129, 0.34);
+  transform: translateY(-2px);
+}
+
+/* ── Responsive ── */
+
+@media (min-width: 768px) {
+  .about-shell {
+    max-width: 720px;
+    gap: 3rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .about-shell {
+    max-width: 1100px;
+    grid-template-columns: 1.2fr 0.8fr;
+    align-items: center;
+  }
+}
+
+@media (min-width: 1200px) {
+  .about-shell {
+    max-width: 1200px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .about-shell {
+    max-width: 1320px;
+  }
+}
+
+@media (max-height: 900px) {
+  .about-wrapper {
+    padding-top: 4rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .about-heading {
+    font-size: clamp(1.4rem, 3vw, 2.2rem);
+  }
+
+  .about-highlight-item {
+    padding: 0.5rem 0.75rem;
+  }
+
+  .about-highlights {
+    gap: 0.5rem;
+  }
+
+  .about-panel {
+    padding: 0.75rem;
+  }
+
+  .about-focus-list {
+    gap: 0.4rem;
+  }
+}
+
+@media (max-height: 700px) {
+  .about-wrapper {
+    padding-top: 3.5rem;
+  }
+
+  .about-copy {
+    display: none;
+  }
+}
