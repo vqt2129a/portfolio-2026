@@ -74,9 +74,16 @@ export function useOnePageNavigation() {
     };
 
     let touchStartY = 0;
+    let wasAtTop = false;
+    let wasAtBottom = false;
 
     const onTouchStart = (event: TouchEvent) => {
       touchStartY = event.touches[0].clientY;
+      const contentLayer = getContentLayer();
+      if (contentLayer) {
+        wasAtTop = isScrolledToTop(contentLayer);
+        wasAtBottom = isScrolledToBottom(contentLayer);
+      }
     };
 
     const onTouchEnd = (event: TouchEvent) => {
@@ -90,11 +97,11 @@ export function useOnePageNavigation() {
       const goingDown = delta > 0;
       const goingUp = delta < 0;
 
-      // If content is scrollable and not at edge, don't change section
+      // Only change section if content was ALREADY at edge BEFORE touch started
       const hasOverflow = contentLayer.scrollHeight > contentLayer.clientHeight + 2;
       if (hasOverflow) {
-        if (goingDown && !isScrolledToBottom(contentLayer)) return;
-        if (goingUp && !isScrolledToTop(contentLayer)) return;
+        if (goingDown && !wasAtBottom) return;
+        if (goingUp && !wasAtTop) return;
       }
 
       if (goingDown && index < SECTIONS.length - 1) {
