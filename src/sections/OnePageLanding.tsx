@@ -59,8 +59,8 @@ export default function OnePageLanding() {
             </button>
           ))}
 
-          <a href="mailto:voquangthanh.dev@gmail.com" className="onepage-cta-btn">
-            Hire me
+          <a href="https://mail.google.com/mail/?view=cm&to=voquangthanh2004@gmail.com" target="_blank" rel="noopener noreferrer" className="onepage-cta-btn">
+            Contact
           </a>
         </div>
       </nav>
