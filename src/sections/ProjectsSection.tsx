@@ -21,12 +21,12 @@ const PROJECTS: ProjectItem[] = [
   },
   {
     name: "Portfolio Website",
-    tagline: "Designed & built this interactive portfolio from scratch with Three.js particle system, scroll-based navigation & reveal animations",
+    tagline: "Modern one-page portfolio with React Three Fiber particle background, section-based navigation & responsive design",
     tech: ["React", "TypeScript", "Three.js", "Vite"],
     github: "#",
     demo: "#",
     icon: "👤",
-    fullDescription: "The website you're currently viewing — designed and coded entirely from scratch. Built with React and TypeScript on Vite, featuring a 3D particle background using Three.js that runs smoothly even on mid-range devices. Instead of traditional page routing, I implemented a custom scroll-based navigation system where each section (Home, About, Experience, Projects) occupies the full viewport and transitions smoothly on scroll. The styling is pure CSS with a mobile-first approach — the layout automatically adapts from a single column on phones to a multi-column grid on desktops. Each project card opens a glassmorphism-styled modal (like this one) with full details, GitHub links, and tech tags.",
+    fullDescription: "Developed a modern one-page portfolio website using React, TypeScript, and Vite, showcasing projects, experience, and personal branding through a structured landing-page layout. Implemented custom section-based navigation with smooth transitions across Hero, About, Experience, and Projects sections. Built an interactive visual experience using React Three Fiber and Three.js, including a custom animated particle network background to enhance UI appeal. Styled the application with Tailwind CSS v4 and developed reusable components such as branded logo elements and landing-page sections for maintainability. Enhanced user experience through lightweight frontend optimizations such as lazy-loaded 3D scenes, typed text animation, and responsive one-page navigation design.",
   },
   {
     name: "Admin Web App",
