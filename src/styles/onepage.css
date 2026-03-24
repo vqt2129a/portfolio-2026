@@ -43,9 +43,9 @@
   display: flex;
   align-items: stretch;
   justify-content: center;
-  overflow: hidden;
-
-
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
 }
 
 
@@ -58,7 +58,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 36px;
+  padding: 0 12px;
   height: 56px;
   background: linear-gradient(180deg, rgba(1, 13, 18, 0.8) 0%, rgba(1, 13, 18, 0.45) 100%);
   backdrop-filter: blur(14px);
@@ -96,7 +96,14 @@
 .onepage-nav-links {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 2px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.onepage-nav-links::-webkit-scrollbar {
+  display: none;
 }
 
 .onepage-nav-item {
@@ -104,13 +111,15 @@
   border: none;
   cursor: pointer;
   font-family: "Share Tech Mono", monospace;
-  font-size: 11px;
-  letter-spacing: 0.18em;
+  font-size: 10px;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.38);
-  padding: 8px 14px;
+  padding: 8px 10px;
   border-radius: 6px;
   position: relative;
+  white-space: nowrap;
+  flex-shrink: 0;
   transition: color 0.3s ease, background 0.3s ease;
 }
 
