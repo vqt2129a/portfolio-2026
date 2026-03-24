@@ -4,14 +4,14 @@
 
 .proj-wrapper {
   width: 100%;
-  min-height: 100vh;
+  min-height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  padding: clamp(4rem, 8vw, 6rem) clamp(1.5rem, 5vw, 6rem);
+  padding: 24px clamp(1.5rem, 5vw, 6rem);
   transition: opacity 0.4s ease, transform 0.4s ease;
-  padding-bottom: 10rem;
+  padding-bottom: 6rem;
 }
 
 .proj-container {
