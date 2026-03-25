@@ -339,6 +339,78 @@
 
 /* ─── Responsive (Bootstrap Mobile-First) ─── */
 
+/* Extra small (xs) - < 576px */
+@media (max-width: 575px) {
+  .proj-wrapper {
+    padding: 16px 10px;
+    padding-bottom: 6rem;
+  }
+
+  .proj-card {
+    padding: 0.85rem;
+  }
+
+  .proj-card-name {
+    font-size: 0.92rem;
+  }
+
+  .proj-card-tagline {
+    font-size: 0.78rem;
+  }
+
+  /* Modal mobile fix */
+  .proj-modal-overlay {
+    padding: 0.75rem;
+    align-items: center;
+  }
+
+  .proj-modal-content {
+    padding: 1.25rem;
+    border-radius: 1rem;
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+
+  .proj-modal-header {
+    margin-bottom: 1rem;
+    gap: 0.75rem;
+  }
+
+  .proj-modal-icon {
+    font-size: 1.8rem;
+  }
+
+  .proj-modal-name {
+    font-size: 1.3rem;
+  }
+
+  .proj-modal-description {
+    font-size: 0.85rem;
+    line-height: 1.6;
+  }
+
+  .proj-modal-body {
+    gap: 1rem;
+  }
+
+  .proj-modal-links {
+    flex-wrap: wrap;
+    gap: 0.6rem;
+  }
+
+  .proj-modal-btn {
+    padding: 0.6rem 1rem;
+    font-size: 0.75rem;
+  }
+
+  .proj-modal-close {
+    top: 0.75rem;
+    right: 0.75rem;
+    width: 30px;
+    height: 30px;
+  }
+}
+
 /* Small (sm) - >= 576px */
 @media (min-width: 576px) {
   .proj-container {
@@ -369,6 +441,10 @@
     max-width: 960px;
     padding: 1.25rem 1.5rem;
   }
+
+  .proj-wrapper {
+    justify-content: center;
+  }
 }
 
 /* Extra large (xl) - >= 1200px */
@@ -387,12 +463,6 @@
 @media (min-width: 1400px) {
   .proj-container {
     max-width: 1320px;
-  }
-}
-
-@media (min-width: 992px) {
-  .proj-wrapper {
-    justify-content: center;
   }
 }
 

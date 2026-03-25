@@ -1,4 +1,4 @@
-﻿:root {
+:root {
   --bg-deep: #010d12;
   --bg-mid: #071c26;
   --line: rgba(97, 255, 213, 0.18);
@@ -21,6 +21,7 @@ body,
 #root {
   width: 100%;
   height: 100%;
+  overflow-x: hidden;
 }
 
 html {

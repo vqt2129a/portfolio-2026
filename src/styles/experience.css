@@ -207,14 +207,65 @@
 
 /* ── Responsive ── */
 
+/* Extra small (xs) - < 576px */
+@media (max-width: 575px) {
+  .exp-wrapper {
+    padding: 16px 10px;
+  }
+
+  .exp-container {
+    padding-bottom: 3rem;
+  }
+
+  .exp-card {
+    padding: 0.85rem 1rem;
+    gap: 0.7rem;
+  }
+
+  .exp-card-company {
+    font-size: 0.95rem;
+  }
+
+  .exp-card-period {
+    font-size: 0.75rem;
+  }
+
+  .exp-card-role {
+    font-size: 0.82rem;
+  }
+
+  .exp-card-summary {
+    font-size: 0.8rem;
+  }
+
+  .exp-project-name {
+    font-size: 0.88rem;
+  }
+
+  .exp-project-desc {
+    font-size: 0.8rem;
+  }
+
+  .exp-tech-tag {
+    font-size: 0.62rem;
+    padding: 0.15rem 0.35rem;
+  }
+}
+
+/* Large (lg) - >= 992px */
 @media (min-width: 992px) {
   .exp-card {
     grid-template-columns: 1fr 1.6fr;
     gap: 2rem;
     padding: 1.25rem 1.75rem;
   }
+
+  .exp-wrapper {
+    justify-content: center;
+  }
 }
 
+/* Extra large (xl) - >= 1200px */
 @media (min-width: 1200px) {
   .exp-timeline {
     gap: 1rem;
@@ -247,12 +298,6 @@
 
   .exp-project-chip {
     padding: 0.45rem 0.65rem;
-  }
-}
-
-@media (min-width: 992px) {
-  .exp-wrapper {
-    justify-content: center;
   }
 }
 

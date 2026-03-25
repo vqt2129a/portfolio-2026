@@ -240,6 +240,71 @@
 
 /* ── Responsive ── */
 
+/* Extra small (xs) - < 576px */
+@media (max-width: 575px) {
+  .about-wrapper {
+    padding: 16px 12px;
+    padding-bottom: 4rem;
+  }
+
+  .about-shell {
+    gap: 1.5rem;
+  }
+
+  .about-heading {
+    font-size: 1.45rem;
+    max-width: 100%;
+  }
+
+  .about-copy {
+    font-size: 0.85rem;
+    max-width: 100%;
+  }
+
+  .about-highlights {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.35rem;
+  }
+
+  .about-highlight-item {
+    padding: 0.5rem 0.55rem;
+  }
+
+  .about-highlight-value {
+    font-size: 1rem;
+  }
+
+  .about-highlight-label {
+    font-size: 0.6rem;
+  }
+
+  .about-link-btn {
+    padding: 0.4rem 0.7rem;
+    font-size: 0.65rem;
+  }
+
+  .about-panel {
+    padding: 0.75rem;
+  }
+
+  .about-focus-list li {
+    font-size: 0.82rem;
+  }
+
+  .about-chip {
+    padding: 0.3rem 0.5rem;
+    font-size: 0.62rem;
+  }
+}
+
+/* Small (sm) - >= 576px */
+@media (min-width: 576px) {
+  .about-shell {
+    max-width: 540px;
+  }
+}
+
+/* Medium (md) - >= 768px */
 @media (min-width: 768px) {
   .about-shell {
     max-width: 720px;
@@ -247,6 +312,7 @@
   }
 }
 
+/* Large (lg) - >= 992px */
 @media (min-width: 992px) {
   .about-wrapper {
     justify-content: center;
@@ -259,12 +325,14 @@
   }
 }
 
+/* Extra large (xl) - >= 1200px */
 @media (min-width: 1200px) {
   .about-shell {
     max-width: 1200px;
   }
 }
 
+/* Extra extra large (xxl) - >= 1400px */
 @media (min-width: 1400px) {
   .about-shell {
     max-width: 1320px;

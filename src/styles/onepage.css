@@ -145,7 +145,21 @@
 }
 
 .onepage-cta-btn {
-  display: none;
+  display: inline-flex;
+  padding: 6px 10px;
+  margin-left: 4px;
+  font-family: "Share Tech Mono", monospace;
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--accent);
+  border: 1px solid rgba(111, 255, 217, 0.4);
+  border-radius: 4px;
+  background: rgba(111, 255, 217, 0.05);
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+  white-space: nowrap;
 }
 
 .onepage-cta-btn:hover {
@@ -160,6 +174,16 @@
 
 /* ─── Responsive (Bootstrap Mobile-First) ─── */
 
+/* Small (sm) - >= 576px */
+@media (min-width: 576px) {
+  .onepage-cta-btn {
+    padding: 7px 12px;
+    margin-left: 6px;
+    font-size: 10px;
+  }
+}
+
+/* Medium (md) - >= 768px */
 @media (min-width: 768px) {
   .onepage-nav {
     padding: 0 24px;
@@ -174,23 +198,21 @@
     padding: 8px 12px;
     letter-spacing: 0.14em;
   }
+
+  .onepage-cta-btn {
+    padding: 8px 14px;
+    margin-left: 10px;
+    font-size: 11px;
+  }
 }
 
+/* Large (lg) - >= 992px */
 @media (min-width: 992px) {
   .onepage-cta-btn {
-    display: inline-flex;
     padding: 8px 16px;
     margin-left: 12px;
-    font-family: "Share Tech Mono", monospace;
     font-size: 11px;
     letter-spacing: 0.12em;
-    text-transform: uppercase;
-    text-decoration: none;
-    color: var(--accent);
-    border: 1px solid rgba(111, 255, 217, 0.4);
-    border-radius: 4px;
-    background: rgba(111, 255, 217, 0.05);
-    transition: all 0.3s ease;
   }
 
   .onepage-dots {
@@ -205,6 +227,7 @@
   }
 }
 
+/* Extra large (xl) - >= 1200px */
 @media (min-width: 1200px) {
   .onepage-nav {
     padding: 0 40px;
