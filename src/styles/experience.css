@@ -214,7 +214,7 @@
   }
 
   .exp-container {
-    padding-bottom: 3rem;
+    padding-bottom: 5rem;
   }
 
   .exp-card {
@@ -275,7 +275,7 @@
 @media (max-height: 900px) {
   .exp-wrapper {
     padding-top: 4rem;
-    padding-bottom: 1.5rem;
+    padding-bottom: 4rem;
   }
 
   .exp-timeline {
