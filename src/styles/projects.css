@@ -466,8 +466,8 @@
   }
 }
 
-/* Special case for very short screens */
-@media (max-height: 800px) {
+/* Special case for very short desktop screens */
+@media (max-height: 800px) and (min-width: 992px) {
   .proj-container {
     max-height: calc(100vh - 100px);
   }
