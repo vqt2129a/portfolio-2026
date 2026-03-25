@@ -174,6 +174,35 @@
 
 /* ─── Responsive (Bootstrap Mobile-First) ─── */
 
+/* Extra small (xs) - < 576px */
+@media (max-width: 575px) {
+  .onepage-nav {
+    padding: 0 8px;
+  }
+
+  .onepage-nav-links {
+    gap: 0px;
+  }
+
+  .onepage-nav-item {
+    font-size: 8px;
+    padding: 6px 5px;
+    letter-spacing: 0.08em;
+  }
+
+  .onepage-cta-btn {
+    padding: 5px 8px;
+    margin-left: 2px;
+    font-size: 8px;
+    letter-spacing: 0.06em;
+  }
+
+  .qt-logo-svg {
+    width: 30px;
+    height: 30px;
+  }
+}
+
 /* Small (sm) - >= 576px */
 @media (min-width: 576px) {
   .onepage-cta-btn {

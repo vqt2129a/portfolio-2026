@@ -1,4 +1,5 @@
 import { useRef, useState, useEffect, type RefObject } from "react";
+import { createPortal } from "react-dom";
 
 interface ProjectItem {
   name: string;
@@ -165,8 +166,8 @@ export default function ProjectsSection({ animating }: ProjectsSectionProps) {
         </div>
       </div>
 
-      {/* Project Modal */}
-      {selectedProject && (
+      {/* Project Modal - Portal to body to avoid transform containment */}
+      {selectedProject && createPortal(
         <div className="proj-modal-overlay" onClick={() => setSelectedProject(null)}>
           <div className="proj-modal-content" onClick={(e) => e.stopPropagation()}>
             <button className="proj-modal-close" onClick={() => setSelectedProject(null)}>
@@ -209,7 +210,8 @@ export default function ProjectsSection({ animating }: ProjectsSectionProps) {
               </div>
             </div>
           </div>
-        </div>
+        </div>,
+        document.body
       )}
     </div>
   );
