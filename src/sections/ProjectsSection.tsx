@@ -43,7 +43,6 @@ const PROJECTS: ProjectItem[] = [
     tagline: "End-to-end e-commerce web application with product catalog, shopping cart, order processing & role-based authorization",
     tech: ["ASP.NET MVC", "C#", "SQL Server", "EF Core"],
     github: "https://github.com/vqt2129a/techstore-aspnetmvc-ecommerce",
-    demo: "https://www.youtube.com/watch?v=W_FjWnDgTjc&t=26s",
     icon: "🛒",
     fullDescription: "Designed and developed an end-to-end e-commerce web application using ASP.NET MVC and C#, covering the complete shopping workflow from product browsing to order processing. Implemented core features including product catalog management, shopping cart functionality, and order processing. Built backend logic using Entity Framework for efficient database interaction and data persistence. Developed dynamic server-rendered UI using Razor, handling user interactions and data presentation. Implemented user authentication and role-based authorization to ensure secure access for customers and administrators. Applied the MVC architecture to structure the application, ensuring clear separation of concerns and maintainability.",
   },
