@@ -16,7 +16,7 @@ interface TimelineItem {
 
 const TIMELINE: TimelineItem[] = [
   {
-    period: "Jan 2026 → Present",
+    period: "10/2025 - 03/2026",
     company: "ITECCOM Technology Company Limited",
     role: "Full-stack Developer",
     tech: ["ASP.NET Core 8", "ASP.NET MVC 5", "SQL Server", "JavaScript", "REST API"],
@@ -37,7 +37,7 @@ const TIMELINE: TimelineItem[] = [
     ],
   },
   {
-    period: "Oct → Dec 2025",
+    period: "08/2025 - 10/2025",
     company: "Computing Community and Technology Corporation",
     role: "Intern Full-stack Developer",
     tech: ["ReactJS", "ASP.NET Core", "SQL Server", "JWT", "RESTful API"],
