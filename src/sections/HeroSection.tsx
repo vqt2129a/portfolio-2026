@@ -62,6 +62,13 @@ export default function HeroSection({ animating }: HeroSectionProps) {
           Crafting modern web experiences with clean code &amp; sharp design.
         </p>
       </div>
+
+      <div className="hero-scroll-indicator" aria-hidden="true">
+        <span className="hero-scroll-text">Scroll</span>
+        <div className="hero-mouse">
+          <span className="hero-mouse-dot" />
+        </div>
+      </div>
     </div>
   );
 }
