@@ -76,7 +76,7 @@
   flex-direction: column;
   align-items: center;
   gap: 6px;
-  animation: fadeUp 0.5s 2s ease both;
+  animation: heroScrollFadeUp 0.5s 2s ease both;
 }
 
 .hero-scroll-text {
@@ -103,6 +103,17 @@
   background: var(--accent);
   border-radius: 2px;
   animation: scrollDot 1.8s ease-in-out infinite;
+}
+
+@keyframes heroScrollFadeUp {
+  from {
+    opacity: 0;
+    transform: translate(-50%, 16px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
 }
 
 /* ─── Responsive (Bootstrap Mobile-First) ─── */
