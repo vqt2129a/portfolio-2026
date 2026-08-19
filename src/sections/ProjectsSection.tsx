@@ -25,7 +25,7 @@ const PROJECTS: ProjectItem[] = [
     name: "Portfolio Website",
     tagline: "Modern one-page portfolio with React Three Fiber particle background, section-based navigation & responsive design",
     tech: ["React", "TypeScript", "Three.js", "Vite"],
-    github: "#",
+    github: "https://github.com/vqt2129a/portfolio-2026",
     demo: "#",
     icon: "👤",
     fullDescription: "Developed a modern one-page portfolio website using React, TypeScript, and Vite, showcasing projects, experience, and personal branding through a structured landing-page layout. Implemented custom section-based navigation with smooth transitions across Hero, About, Experience, and Projects sections. Built an interactive visual experience using React Three Fiber and Three.js, including a custom animated particle network background to enhance UI appeal. Styled the application with Tailwind CSS v4 and developed reusable components such as branded logo elements and landing-page sections for maintainability. Enhanced user experience through lightweight frontend optimizations such as lazy-loaded 3D scenes, typed text animation, and responsive one-page navigation design.",
