@@ -108,12 +108,40 @@
   color: var(--accent);
 }
 
+.exp-card-company-header {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
 .exp-card-company {
   margin: 0;
   font-size: 1.05rem;
   font-weight: 700;
   line-height: 1.25;
   color: var(--text-main);
+}
+
+.exp-company-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-family: "Share Tech Mono", monospace;
+  font-size: 0.72rem;
+  color: var(--accent);
+  text-decoration: none;
+  background: rgba(33, 219, 187, 0.08);
+  border: 1px solid rgba(33, 219, 187, 0.25);
+  padding: 0.15rem 0.45rem;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.exp-company-link:hover {
+  background: rgba(33, 219, 187, 0.2);
+  border-color: var(--accent);
+  color: #fff;
 }
 
 .exp-card-role {

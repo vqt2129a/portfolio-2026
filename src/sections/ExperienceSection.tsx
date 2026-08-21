@@ -9,6 +9,7 @@ interface TimelineItem {
   period: string;
   company: string;
   role: string;
+  link?: string;
   tech: string[];
   summary: string;
   projects: ProjectItem[];
@@ -17,22 +18,27 @@ interface TimelineItem {
 const TIMELINE: TimelineItem[] = [
   {
     period: "06/2026 - 07/2026",
-    company: "Freelance",
+    company: "Freelance — Driving School Web Portal",
     role: "Full-stack Developer",
+    link: "https://daotaolaixehiepthanh.vn",
     tech: ["ASP.NET Core 9", "React 18", "Node.js", "Prisma ORM", "SQL Server", "Tailwind CSS"],
-    summary: "Built an end-to-end web system comprising an SEO-friendly public landing portal, Admin SPA Dashboard, and centralized REST API.",
+    summary: "Built an end-to-end web system comprising an SEO-friendly public landing portal (.NET 9 MVC), an Admin SPA Dashboard (ReactJS, Vite), and a centralized Backend API (Node.js, Prisma, SQL Server).",
     projects: [
       {
-        name: "Admin SPA Dashboard (daotaolaixehiepthanh.vn)",
-        desc: "Developed responsive Single Page Application with React 18, Vite, Tailwind CSS, rich-text editors, React Router v7 & Axios JWT interceptors with role-based route protection",
+        name: "Single Page Admin Dashboard",
+        desc: "Developed a responsive SPA Admin Dashboard using React 18, Vite, and Tailwind CSS, integrating rich-text editors to manage course offerings, news articles, instructor profiles, and dynamic banners.",
       },
       {
-        name: "RESTful API & Database Architecture",
-        desc: "Designed SQL Server database schema & RESTful API using Prisma ORM with soft deletes, transaction validation logic, and Bcryptjs security",
+        name: "Client-side Navigation & Auth",
+        desc: "Configured client-side navigation with React Router v7 and centralized Axios interceptors to manage JWT authentication flow, token storage, and secure, role-based route protection.",
       },
       {
-        name: "SEO Public Landing Portal (.NET 9 MVC)",
-        desc: "Architected SSR public pages using ASP.NET Core 9 MVC, HttpClient Node.js integration, custom Action Filters, slug-based routing, and dynamic Open Graph/Meta tags",
+        name: "RESTful API & Database Schema",
+        desc: "Designed and implemented the RESTful API & database schema on SQL Server using Prisma ORM, implementing soft deletes, transaction validation logic, and password hashing with Bcryptjs.",
+      },
+      {
+        name: "SEO Public Portal (.NET 9 MVC)",
+        desc: "Architected server-side rendered public pages using ASP.NET Core 9 MVC, connecting to the Node.js API via HttpClient and implementing custom Action Filters, slug-based routing, and dynamic Open Graph/Meta tags.",
       },
     ],
   },
@@ -117,7 +123,34 @@ export default function ExperienceSection({ animating }: ExperienceSectionProps)
               {/* Left: Company info */}
               <div className="exp-card-left">
                 <div className="exp-card-period">{item.period}</div>
-                <h3 className="exp-card-company">{item.company}</h3>
+                <div className="exp-card-company-header">
+                  <h3 className="exp-card-company">{item.company}</h3>
+                  {item.link && (
+                    <a
+                      href={item.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="exp-company-link"
+                      title={item.link}
+                    >
+                      <span>{item.link.replace(/^https?:\/\//, '')}</span>
+                      <svg
+                        width="11"
+                        height="11"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      >
+                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                        <polyline points="15 3 21 3 21 9" />
+                        <line x1="10" y1="14" x2="21" y2="3" />
+                      </svg>
+                    </a>
+                  )}
+                </div>
                 <div className="exp-card-role">{item.role}</div>
                 <p className="exp-card-summary">{item.summary}</p>
                 <div className="exp-card-tech">
