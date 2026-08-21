@@ -16,9 +16,30 @@ interface TimelineItem {
 
 const TIMELINE: TimelineItem[] = [
   {
+    period: "06/2026 - 07/2026",
+    company: "Freelance",
+    role: "Full-stack Developer",
+    tech: ["ASP.NET Core 9", "React 18", "Node.js", "Prisma ORM", "SQL Server", "Tailwind CSS"],
+    summary: "Built an end-to-end web system comprising an SEO-friendly public landing portal, Admin SPA Dashboard, and centralized REST API.",
+    projects: [
+      {
+        name: "Admin SPA Dashboard (daotaolaixehiepthanh.vn)",
+        desc: "Developed responsive Single Page Application with React 18, Vite, Tailwind CSS, rich-text editors, React Router v7 & Axios JWT interceptors with role-based route protection",
+      },
+      {
+        name: "RESTful API & Database Architecture",
+        desc: "Designed SQL Server database schema & RESTful API using Prisma ORM with soft deletes, transaction validation logic, and Bcryptjs security",
+      },
+      {
+        name: "SEO Public Landing Portal (.NET 9 MVC)",
+        desc: "Architected SSR public pages using ASP.NET Core 9 MVC, HttpClient Node.js integration, custom Action Filters, slug-based routing, and dynamic Open Graph/Meta tags",
+      },
+    ],
+  },
+  {
     period: "10/2025 - 05/2026",
     company: "ITECCOM Technology Company Limited",
-    role: "Full-stack Developer",
+    role: "Fresher Full-stack Developer",
     tech: ["ASP.NET Core 8", "ASP.NET MVC 5", "SQL Server", "JavaScript", "REST API"],
     summary: "Building enterprise web applications — from database design to production UI.",
     projects: [
