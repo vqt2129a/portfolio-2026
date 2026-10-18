@@ -2,7 +2,7 @@ import { useRef, useState, useEffect, type RefObject } from "react";
 
 const STACK = [
   "React", "TypeScript", "Node.js", ".NET",
-  "Tailwind", "SQL Server", "Docker", "Git", "NestJS",
+  "MySQL", "Redis", "Tailwind", "SQL Server", "Docker", "Git", "NestJS",
 ];
 
 const FOCUS_ITEMS = [
@@ -77,7 +77,7 @@ export default function AboutSection({ animating }: AboutSectionProps) {
           </div>
 
           <div className="about-links">
-            <a href="/Quang_Thanh_CV (FullStack).pdf" target="_blank" rel="noopener noreferrer" className="about-link-btn about-link-primary">
+            <a href="/Quang_Thanh_CV(FullStack).pdf" target="_blank" rel="noopener noreferrer" className="about-link-btn about-link-primary">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4" />
                 <polyline points="7 10 12 15 17 10" />

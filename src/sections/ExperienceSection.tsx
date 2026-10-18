@@ -17,6 +17,23 @@ interface TimelineItem {
 
 const TIMELINE: TimelineItem[] = [
   {
+    period: "06/2026 - Present",
+    company: "MID Viet Nam Company Limited",
+    role: "Full-stack Developer (Contractor)",
+    tech: ["Node.js 22", "TypeScript", "React 18", "UmiJS Max", "Ant Design 5", "MySQL", "Redis", "BullMQ", "TSyringe", "DDD"],
+    summary: "Architected and built an end-to-end full-stack operations platform (Insight Center) with 175 REST endpoints, 47 MySQL tables, and ~38 screens under DDD/Clean Architecture.",
+    projects: [
+      {
+        name: "Insight Center – Enterprise Operations Platform",
+        desc: "Engineered hierarchical RBAC (org-tree scoping, SingleFlight cache, Transactional Outbox), geofenced attendance (Ray-casting polygon, IP fallback, FOR UPDATE row locks), and an immutable audit trail (AES-256-GCM encryption & SHA-256 hash chain) with AntV X6 org charts and permission-gated UIs, ensuring sub-500ms API p95 latency and zero data tampering.",
+      },
+      {
+        name: "Automated Payroll, QA Scoring & Alert Engines",
+        desc: "Replaced manual spreadsheets by building an interactive @dnd-kit Kanban board and a 7-status task state machine featuring QA gates, bug-reopen penalties, and optimistic locking. Developed deterministic domain services for statutory payroll computation (prorated salary, OT, capped insurance deductions, and task-score bonuses) across a row-locked approval flow with append-only adjustment ledgers and ExcelJS exports. Built an idempotent alert engine using MySQL unique generated columns (open_key) and batch sweep crons, eliminating duplicate alerts and payroll discrepancies.",
+      },
+    ],
+  },
+  {
     period: "06/2026 - 07/2026",
     company: "Freelance — Driving School Web Portal",
     role: "Full-stack Developer",
@@ -47,19 +64,19 @@ const TIMELINE: TimelineItem[] = [
     company: "ITECCOM Technology Company Limited",
     role: "Fresher Full-stack Developer",
     tech: ["ASP.NET Core 8", "ASP.NET MVC 5", "SQL Server", "JavaScript", "REST API"],
-    summary: "Building enterprise web applications — from database design to production UI.",
+    summary: "Designed and implemented enterprise digital signature platforms and scalable CRM systems.",
     projects: [
       {
         name: "Digital Signature Platform",
-        desc: "Multi-method contract signing (image, USB Token), bulk sign, contract type management — designed DB, UI & backend from scratch",
+        desc: "Designed .NET-based digital contract signing supporting single/bulk operations. Developed end-to-end lifecycle management (signer config, PDF mapping, dynamic USB Token/image signatures), optimizing SQL Server schemas to reduce manual processing by 40% and improve reliability under high loads.",
       },
       {
         name: "CRM Saigontourist",
-        desc: "Maintained enterprise CRM — loyalty system, member cards, Vetour API transaction sync",
+        desc: "Enhanced enterprise CRM for loyalty programs and member cards. Engineered backend services to extract and synchronize near real-time transaction data from the Data Warehouse (DW), reducing data latency and improving consistency across concurrent workloads.",
       },
       {
         name: "BMWindows Portal",
-        desc: "App Launcher portal & Admin CMS with dynamic resource management (icons, URLs, statuses)",
+        desc: "App Launcher portal & Admin CMS with dynamic resource management (icons, URLs, statuses).",
       },
     ],
   },

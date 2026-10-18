@@ -13,6 +13,14 @@ interface ProjectItem {
 
 const PROJECTS: ProjectItem[] = [
   {
+    name: "Enterprise RBAC Case Study",
+    tagline: "High-concurrency enterprise authorization engine with org-tree resolution, dual-layer Redis cache & reliable Transactional Outbox",
+    tech: ["Node.js 22", "TypeScript", "MySQL 8", "Redis 7", "BullMQ", "Vitest", "Docker"],
+    github: "https://github.com/vqt2129a/RBAC-Case-Study",
+    icon: "🔐",
+    fullDescription: "Architected and engineered an end-to-end enterprise authorization case study solving complex hierarchical access control across multi-level organizational trees (including concurrent appointments). Utilized MySQL recursive Common Table Expressions (CTEs) and DAG cycle-detection algorithms to dynamically resolve hierarchical data scopes (ALL, ORG, OWN) into parameterized SQL predicates. Designed a high-performance dual-tier caching strategy with Redis MGET by decoupling org subtrees from user auth contexts, slashing authorization latency from 14.2ms to <0.8ms (18x improvement, ~4,500 RPS). Engineered an in-memory SingleFlight mechanism to collapse concurrent cache misses and prevent database stampedes during cold starts. Modeled a 3-tier active cache invalidation pipeline (Synchronous DEL → BullMQ async retry queue → Periodic Reconciler) paired with the Transactional Outbox pattern, guaranteeing zero-loss cache evictions across multi-level role inheritance chains with zero stale-read vulnerabilities.",
+  },
+  {
     name: "AI Text-to-SQL",
     tagline: "Natural language to SQL conversion system powered by LLM, enabling data querying without writing SQL",
     tech: ["React", "Python", "FastAPI", "PostgreSQL", "Docker"],
