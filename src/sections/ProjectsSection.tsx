@@ -13,6 +13,14 @@ interface ProjectItem {
 
 const PROJECTS: ProjectItem[] = [
   {
+    name: "Xiangqi – Chinese Chess",
+    tagline: "Android chess game with an alpha-beta AI, offline-first storage & Firebase cloud sync, built with Clean Architecture and DDD",
+    tech: ["Kotlin", "Jetpack Compose", "Coroutines", "Room", "Firebase"],
+    github: "https://github.com/vqt2129a/xiangqi",
+    icon: "♟️",
+    fullDescription: "Designed and developed an Android Chinese Chess game supporting play against the computer (3 difficulty levels) and two-player mode on one device. Structured the app with Clean Architecture and Domain-Driven Design across 6 Gradle modules: a pure-Kotlin domain (Game aggregate, move rules, check and draw detection, domain events) and Android-independent use cases, with an MVVM presentation layer built on Jetpack Compose, ViewModel and StateFlow. Built a game AI using alpha-beta search with PVS, iterative deepening, a Zobrist transposition table and quiescence search, running on cancellable background coroutines and reaching depth 7 within 3 seconds. Verified the move rules with perft tests against reference values. Implemented offline-first persistence with Room and added Firebase through decorators without touching the domain: FCM push notifications with deep links, anonymous and Google sign-in via Credential Manager with account linking, Firestore cloud sync secured by Security Rules, Crashlytics and Performance Monitoring. Covered domain rules, use cases and ViewModels with 59 unit tests.",
+  },
+  {
     name: "Enterprise RBAC Case Study",
     tagline: "High-concurrency enterprise authorization engine with org-tree resolution, dual-layer Redis cache & reliable Transactional Outbox",
     tech: ["Node.js 22", "TypeScript", "MySQL 8", "Redis 7", "BullMQ", "Vitest", "Docker"],
@@ -61,14 +69,6 @@ const PROJECTS: ProjectItem[] = [
     github: "https://github.com/vqt2129a/evdict-android-api",
     icon: "📖",
     fullDescription: "Designed and developed a dictionary application consisting of an Android client and a backend API, enabling users to search and retrieve word meanings efficiently. Built the Android application to handle user input, display search results, and communicate with backend services. Developed RESTful APIs to process search requests and return dictionary data. Implemented client–server communication between the Android app and backend using HTTP APIs, ensuring real-time data retrieval and smooth user experience. Structured the backend to handle query processing and data management effectively.",
-  },
-  {
-    name: "FilmStream",
-    tagline: "Movie streaming web application with search, filtering, user authentication & engagement features",
-    tech: ["ASP.NET MVC", "C#", "SQL Server", "EF Core"],
-    github: "https://github.com/vqt2129a/filmstream-aspnetmvc",
-    icon: "🎬",
-    fullDescription: "Designed and developed a movie streaming web application using ASP.NET MVC and SQL Server, enabling users to browse, search, and watch movies through a web interface. Implemented core features including movie listing, search and filtering, and detailed movie pages. Built backend logic using Entity Framework for efficient database interaction and data management. Developed dynamic server-rendered UI using Razor, handling user interactions and content display. Implemented user authentication and authorization using ASP.NET Identity, supporting login, registration, and user profile management. Integrated user interaction features such as comments, likes, and view tracking to enhance user engagement. Applied the MVC architecture to structure the application, ensuring maintainability and scalability.",
   },
 ];
 
